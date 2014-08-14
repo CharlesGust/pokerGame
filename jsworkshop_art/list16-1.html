@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>List of Plug-Ins</title>
+</head>
+<body>
+<h1>List of Plug-Ins</h1>
+<hr>
+<p>The following is a list of the plug-ins installed in this
+copy of Netscape, generated using the JavaScript
+navigator.plugins object:</p>
+<hr>
+<table BORDER>
+<tr><th>Plug-in Name</th>
+<th>Filename</th>
+<th>Description</th>
+</tr>
+<script LANGUAGE="JavaScript">
+for (i=0; i<navigator.plugins.length; i++) {
+   document.write("<tr><td>");
+   document.write(navigator.plugins[i].name);
+   document.write("</td><td>");
+   document.write(navigator.plugins[i].filename);
+   document.write("</td><td>");
+   document.write(navigator.plugins[i].description);
+   document.write("</td></tr>");
+}
+</script>
+</table>
+</body>
+</html>

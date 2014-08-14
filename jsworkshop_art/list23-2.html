@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Drop-Down Menu Example</title>
+<script language="JavaScript" src="list23-3.js">
+</script>
+</head>
+<body  style="margin-left:0; margin-top:0;">
+<table border="0" cellpadding="4">
+<tr>
+   <td ID="menu-products" width="100" bgcolor="Silver"
+      onMouseOver="Menu('products');" onMouseOut="Timeout('products');">
+     <a href="products.html"><b>Products</b></a>
+   </td>
+   <td ID="menu-sales" width="100" bgcolor="Silver"
+      onMouseOver="Menu('sales');" onMouseOut="Timeout('sales');">
+      <a href="sales.html"><b>Sales</b></a>
+   </td>
+   <td ID="menu-service" width="100" bgcolor="Silver"
+      onMouseOver="Menu('service');" onMouseOut="Timeout('service');">
+      <a href="service.html"><b>Service</b></a>
+   </td>
+</tr>
+</table>
+<div ID="products" STYLE="position:absolute; visibility: hidden">
+  <table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> <td width="100%" ID="p1"
+     onMouseOver="Highlight('products','p1');"
+     onMouseOut="UnHighlight('products','p1');">
+  <a href="equip.html">Equipment</a></td></tr>
+  <tr> <td width="100%" ID="p2"
+     onMouseOver="Highlight('products','p2');"
+     onMouseOut="UnHighlight('products','p2');">
+  <a href="supplies.html">Supplies</a></td></tr>
+  </table>
+</div>
+<div ID="sales" STYLE="position:absolute; visibility: hidden">
+  <table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> <td width="100%" ID="s1"
+     onMouseOver="Highlight('sales','s1');"
+     onMouseOut="UnHighlight('sales','s1');">
+  <a href="prices.html">Price List</a></td></tr>
+  <tr> <td width="100%" ID="s2"
+     onMouseOver="Highlight('sales','s2');"
+     onMouseOut="UnHighlight('sales','s2');">
+  <a href="order.html">Order Form</a></td></tr>
+  <tr> <td width="100%" ID="s3"
+     onMouseOver="Highlight('sales','s3');"
+     onMouseOut="UnHighlight('sales','s3');">
+  <a href="specials.html">Specials</a></td></tr>
+  </table>
+</div>
+<div ID="service" STYLE="position:absolute; visibility: hidden">
+  <table width="100%" border="0" cellpadding="4" cellspacing="0">
+  <tr> <td width="100%" ID="r1"
+     onMouseOver="Highlight('service','r1');"
+     onMouseOut="UnHighlight('service','r1');">
+  <a href="support.html">Support</a></td></tr>
+  <tr> <td width="100%" ID="r2"
+     onMouseOver="Highlight('service','r2');"
+     onMouseOut="UnHighlight('service','r2');">
+  <a href="cservice.html">Contact Us</a></td></tr>
+  </table>
+</div>
+<h1 align="center">Drop-Down DHTML Menus</h1>
+<p>This is a basic test of drop-down DHTML menus. To
+test the menus, move the mouse over the menu items above.
+</p>
+</body>
+</html>

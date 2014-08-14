@@ -1,0 +1,20 @@
+<html>
+<head><title>Displaying Times and Dates</title></head>
+<body>
+<h1>Current Date and Time</h1>
+<p>
+<script language="JavaScript">
+now = new Date();
+localtime = now.toString();
+utctime = now.toGMTString();
+document.write("<b>Local time:</b> " + localtime + "<BR>");
+document.write("<b>UTC time:</b> " + utctime + "</p>");
+hours = now.getHours();
+mins = now.getMinutes();
+secs = now.getSeconds();
+document.write("<font size='+5'>");
+document.write(hours + ":" + mins + ":" + secs);
+document.write("</font>");
+</script>
+</body>
+</html>

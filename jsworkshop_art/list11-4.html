@@ -1,0 +1,22 @@
+<html>
+<head><title>Alerts, Confirmations, and Prompts</title>
+</head>
+<body>
+<h1>Alerts, Confirmations, and Prompts</h1>
+<hr>
+Use the buttons below to test dialogs in JavaScript.
+<hr>
+<form NAME="winform">
+<p><input TYPE="button" VALUE="Display an Alert" 
+onClick="window.alert('This is a test alert.');  "></p>
+<p><input TYPE="button" VALUE="Display a Confirmation"
+onClick="temp = window.confirm('Would you like to confirm?');
+window.status=(temp)?'confirm: true':'confirm: false'; "></p>
+<P><input TYPE="button" VALUE="Display a Prompt"
+onClick="var temp = window.prompt('Enter some Text:','This is the default value');
+window.status=temp;  "></p>
+</form>
+<br>Have fun!
+<hr>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Primitive Animation in JavaScript</title>
+<script LANGUAGE="JavaScript">
+var cbox=0;
+var nbox=1;
+var cimage=0;
+var nimage=0;
+function preload() {
+   a1 = new Image();
+   a1.src = "mouse1.gif";
+   a2 = new Image();
+   a2.src = "mouse2.gif";
+   a3 = new Image();
+   a3.src = "mouse3.gif";
+   a4 = new Image();
+   a4.src = "mouse4.gif";
+   a5 = new Image();
+   a5.src = "mouse5.gif";
+   a6 = new Image();
+   a6.src = "mouse6.gif";
+   a7 = new Image();
+   a7.src = "mouse7.gif";
+   a8 = new Image();
+   a8.src = "mouse8.gif";
+   window.setTimeout("next();",500);
+}
+function next() {
+   cimage += 1;
+   if (cimage > 8) {
+       cimage = 4;
+       document.images[cbox].src = "mouse0.gif";
+       cbox = (cbox + 1) % 5;
+       nbox = (cbox + 1) % 5;
+   }
+   nimage = cimage - 5;
+   if (nimage <= 0) nimage = 0;
+   document.images[cbox].src = "mouse" + cimage + ".gif";
+   document.images[nbox].src = "mouse" + nimage + ".gif";
+   window.setTimeout("next();",100);
+}
+</script>
+</head>
+<body onLoad="preload();">
+<H1>Animation in JavaScript</H1>
+<HR>
+<center>
+<img src="mouse0.gif" width=100 height=100 alt="" border="0"><img src="mouse0.gif" width=100 height=100 alt="" border="0"><img src="mouse0.gif" width=100 height=100 alt="" border="0"><img src="mouse0.gif" width=100 height=100 alt="" border="0"><img src="mouse0.gif" width=100 height=100 alt="" border="0">
+</center>
+<HR>
+</body>
+</html>

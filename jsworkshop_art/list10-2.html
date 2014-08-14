@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Descriptive Links</title>
+<script LANGUAGE="JavaScript">
+function describe(text) {
+    window.status = text;
+    return true;
+}
+function clearstatus() {
+     window.status="";
+}
+</script>
+</head>
+<body>
+<h1>Descriptive Links</h1>
+<p>Move the mouse pointer over one of
+these links to view a description:</p>
+<ul>
+<li><a HREF="order.html"
+    onMouseOver="describe('Order a product'); return true;"
+    onMouseOut="clearstatus();">
+Order Form</a>
+<li><a HREF="email.html"
+    onMouseOver="describe('Send us a message'); return true;"
+    onMouseOut="clearstatus();">
+Email</a>
+<li><A HREF="complain.html"
+    onMouseOver="describe('Insult us, our products, or our families'); return true;"
+    onMouseOut="clearstatus();">
+Complaint Department</a>
+</ul>
+</body>
+</html>
