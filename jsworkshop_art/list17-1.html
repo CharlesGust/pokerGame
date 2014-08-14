@@ -1,0 +1,23 @@
+<html><head>
+<title>Error handling test</title>
+<script language="JavaScript1.1" type="text/javascript1.1">
+function errmsg(message,url,line) {
+   amsg = "A JavaScript error has occurred. Please let us know about it.\n";
+   amsg += "Error Message: " + message + "\n";
+   amsg += "URL: " + url + "\n";
+   amsg += "Line #: " + line;
+   alert(amsg);
+   return true;
+}
+window.onerror=errmsg;
+</script>
+</head>
+<body>
+<h1> Error handling test</h1>
+<p>This page includes a JavaScript function to handle errors.
+Test it by clicking the button below.</p>
+<form>
+   <input type="button" value="ERROR" onClick="garble">
+</form>
+</body>
+</html>

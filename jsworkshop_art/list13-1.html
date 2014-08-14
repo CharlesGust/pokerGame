@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Image Map Example</title>
+<script LANGUAGE="JavaScript">
+function update(t) {
+   document.form1.text1.value = t;
+}
+</script>
+</head>
+<body>
+<map NAME="map1">
+<area SHAPE=RECT COORDS="14,15,151,87" onClick="update('service');"
+onMouseOver="window.status='Service Department'; return true;">
+<area SHAPE=RECT COORDS="162,16,283,85" onClick="update('sales');"
+onMouseOver="window.status='Sales Department'; return true;">
+<area SHAPE=RECT COORDS="294,15,388,87" onClick="update('info');"
+onMouseOver="window.status='Information'; return true;">
+<area SHAPE=RECT COORDS="13,98,79,178" onClick="update('email');"
+onMouseOver="window.status='Email Us'; return true;">
+<area SHAPE=RECT COORDS="92,97,223,177" onClick="update('products');"
+onMouseOver="window.status='Products'; return true;">
+<area SHAPE=RECT COORDS="235,98,388,177" onClick="update('our staff');"
+onMouseOver="window.status='Our Staff'; return true;">
+<area SHAPE=default onClick="update('No item selected.');"
+onMouseOver="window.status='Please select an item.'; return true;">
+</map>
+<h1>Client-Side Image Map Example</h1>
+<hr>
+The image map below uses JavaScript functions in each of its areas. Moving over
+an area will display information about it in the status line. Clicking on an area
+places the name of the area in the text field below the image map.
+<hr>
+<img SRC="imagemap.gif" USEMAP="#map1">
+<hr>
+<FORM NAME="form1">
+<b>Clicked Item:</b>
+<input TYPE="text" NAME="text1" VALUE="Please select an item.">
+</form>
+<hr>
+</body>
+</html>

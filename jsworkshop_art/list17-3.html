@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Guess a Number</title>
+<script LANGUAGE="JavaScript">
+var num = Math.floor(Math.random() * 100) + 1;
+var tries = 0;
+function Guess() {
+var g = document.form1.guess1.value;
+tries++;
+status = "Tries: " + tries;
+if (g < num)
+    document.form1.hint.value = "No, guess higher.";
+if (g > num)
+    document.form1.hint.value = "No, guess lower.";
+if (g == num) {
+    window.alert("Correct! You guessed it in " + tries + " tries.");
+    location.reload();
+    }
+if (tries == 10) {
+    window.alert("Sorry, time's up. The number was: " + num);
+    location.reload();
+    }
+}
+</script>
+</head>
+<body>
+<h1>Guess a Number</h1>
+<hr>
+<p>I'm thinking of a number between 1 and 100. Try to guess
+it in less than 10 tries.</p>
+<form NAME="form1">
+<input TYPE="text" SIZE=25 NAME="hint" VALUE="Enter your Guess.">
+<br>
+<b>Guess:</b>
+<input TYPE="text" NAME="guess1" SIZE="5">
+<input TYPE="BUTTON" VALUE="Guess"  onClick="Guess();">
+</form>
+</body>
+</html>

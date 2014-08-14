@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Browser Detection</title>
+<script language="Javascript">
+// check for 5.0 or later browsers
+if (parseInt(navigator.appVersion) >= 5
+   || navigator.appVersion.indexOf("MSIE 5") != -1
+   || navigator.appVersion.indexOf("MSIE 6") != -1) {
+      browser="DOM";
+} else if (navigator.userAgent.indexOf("Mozilla/4") != -1)
+   {
+   if (navigator.appName.indexOf("Netscape") != -1)
+      browser="NS4";
+   if (navigator.appVersion.indexOf("MSIE 4") != -1)
+      browser="IE4";
+  } else browser="Other";
+</script>
+</head>
+<body>
+<h1>Browser Detection Example</h1>
+<script language="Javascript">
+document.write("browser detected: " + browser + "<br>");
+</script>
+</body>
+</html>

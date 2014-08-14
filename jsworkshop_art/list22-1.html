@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Draw Poker</title>
+</head>
+<body>
+<img src="title.gif" width=381 height=81>
+<hr>
+<form NAME="form1">
+<table>
+<tr>
+  <td> <img border=0 src="blank.gif" height=136 width=106>
+  <td> <img border=0 src="blank.gif" height=136 width=106>
+  <td> <img border=0 src="blank.gif" height=136 width=106>
+  <td> <img border=0 src="blank.gif" height=136 width=106>
+  <td> <img border=0 src="blank.gif" height=136 width=106>
+  <td> </td>
+</tr>
+<tr>
+  <td> <a href="#" onClick="Hold(1);">
+       <img border=0 src="hold.gif" height=50 width=106></a>
+  <td> <a href="#" onClick="Hold(2);">
+       <img border=0 src="hold.gif" height=50 width=106></a>
+  <td> <a href="#" onClick="Hold(3);">
+       <img border=0 src="hold.gif" height=50 width=106></a>
+  <td> <a href="#" onClick="Hold(4);">
+       <img border=0 src="hold.gif" height=50 width=106></a>
+  <td> <a href="#" onClick="Hold(5);">
+       <img border=0 src="hold.gif" height=50 width=106></a>
+</tr>
+<tr>
+  <td> <B>Total<BR>Score:</B>
+       <input TYPE="TEXT" SIZE=6 NAME="total" VALUE="100"></td> 
+  <td colspan=2> <B>Current <BR>Hand:</B>
+       <input TYPE="TEXT" SIZE=20 NAME="message"
+        VALUE="Press DEAL to begin.">
+  <td>
+  <td> <a href="#" onClick="DealDraw();">
+       <img border=0 src="deal.gif" height=50 width=106></a>
+</tr>
+</table>
+</form>
+</body>
+</html> 

@@ -1,0 +1,21 @@
+<html>
+<head><title>Create a New Window</title>
+</head>
+<body>
+<h1>Create a New Window</h1>
+<hr>
+<p>Use the buttons below to test opening and closing windows in JavaScript.</p>
+<hr>
+<form NAME="winform">
+<input TYPE="button" VALUE="Open New Window" 
+onClick="NewWin=window.open('','NewWin',
+'toolbar=no,status=no,width=200,height=100'); ">
+<p><input TYPE="button" VALUE="Close New Window"
+onClick="NewWin.close();" ></p>
+<p><input TYPE="button" VALUE="Close Main Window"
+onClick="window.close();"></p>
+</form>
+<br><p>Have fun!</p>
+<hr>
+</body>
+</html>

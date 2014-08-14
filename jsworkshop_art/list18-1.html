@@ -1,0 +1,31 @@
+<html>
+<head><title>Style Sheet Example</title>
+<style>
+BODY {color: blue}
+P {text-align: center;
+   margin-left:20%;
+   margin-right:20%}
+H1, H2, H3 {color: red}
+UL {color: green;
+   font-weight: bold}
+</style>
+</head>
+<body>
+<h1>Welcome to this page</h1>
+<p>The above heading is red, since we specified that H1-H3 headers
+are red. This paragraph is blue, which is the default color for
+the entire body. It's also centered and has 20% margins, which we
+specified as the default for paragraphs.
+</p>
+<p STYLE="color:black">This paragraph has black text, because it overrides
+the default color in the paragraph tag. We didn't override the centering,
+so this paragraph is also centered.</p>
+<ul>
+<li>This is a bullet list.
+<li>It's green and bold, because we specified those defaults for bullet lists.
+<li STYLE="color:red">This item is red, overriding the default.
+<li>This item is back to normal.
+</ul>
+<p>This is another paragraph with the default paragraph style.</p>
+</body>
+</html>

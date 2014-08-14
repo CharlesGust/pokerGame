@@ -1,0 +1,30 @@
+<html>
+<head><title>Cookie Example</title>
+</head>
+<body>
+<h1> Cookie Example</h1>
+<script language="javascript1.1" type="text/javascript1.1">
+cookies=document.cookie;
+alert(cookies);
+startpos=cookies.indexOf("Username")+9;
+   if (startpos<9) {
+      // No cookie set
+      name=window.prompt("Please enter your name","");
+      d = new Date();
+      d.setFullYear(d.getFullYear() + 1);
+      expires="expires=" + d.toGMTString();
+      document.cookie="Username=" + name + "; " + expires;
+      document.write("<h2>Welcome, " + name + "!</h2>");
+   } else {
+      // Cookie was found
+      endpos=cookies.indexOf(";",startpos);
+      if (endpos==-1) endpos=cookies.length;
+      name=cookies.substring(startpos,endpos);
+   document.write("<h2>Welcome Back, " + name + "!</h2>");
+   }
+</script>
+<p>This example's script uses a cookie to save
+the user name. If no cookie is set, it prompts for
+a name.</p>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>A DHTML Scrolling Window</title>
+<script language="JavaScript">
+var pos=100;
+function Scroll() {
+  if (!document.getElementById) return;
+  obj=document.getElementById("thetext");
+  pos -=1;
+  if (pos < 0-obj.offsetHeight+130) return;
+  obj.style.top=pos;  
+  window.setTimeout("Scroll();",30);
+}
+</script>
+</head>
+<body onLoad="Scroll();">
+<h1>Scrolling Window Example</h1>
+<p>This example shows a scrolling window created in DHTML. The window
+is actually a layer that shows a portion of a larger layer.</p>
+<div id="thewindow" style="position:relative;width:180;height:150;
+  overflow:hidden; border-width:2px; border-style:solid; border-color:red">
+<div id="thetext" style="position:absolute;width:170;left:5;top:100">
+<p>This is the first paragraph of the scrolling message. The message
+is created with ordinary HTML.</p>
+<p>Entries within the scrolling area can use any HTML tags. They can
+contain <a href="http://www.starlingtech.com/dhtml/">Links</a>.</p>
+<p>There's no limit on the number of paragraphs that you can include
+here. They don't even need to be formatted as paragraphs.</p>
+<ul><li>For example, you could format items using a bulleted list.</li></ul>
+<p>The scrolling ends when the last part of the scrolling text
+is on the screen. You've reached the end.</p>
+<p><b>[<a href="javascript:pos=100;Scroll();">Start Over</a>]</b></p>
+</div>
+</div>
+</body>
+</html>
