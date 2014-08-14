@@ -214,7 +214,7 @@ function Hand(imageStart) {
     }
 
     for( i=0; i<5; i++) {
-      tally[nums[i]]++;
+      tally[nums[i]-1]++;
     }
 
     for( i=0; i<13; i++) {
