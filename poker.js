@@ -1,12 +1,13 @@
 var nDraws = 0;
 var score = 100;
-var sDir = "jsworkshop_art/";
+var sDir = "jsworkshop_art/"; // hard code the directory prefix
 var myHand;
 var myDeck;
 
 /*
 * pokerRank enables looking up the point value and text description of a
 *  possible poker hand
+*  TODO: Is this the "Javascript Way"?
 */
 var pokerRank = [
 [  0, "No score"],
@@ -106,15 +107,27 @@ function Deck() {
   }
 }
 
-// Numeric sort function
+// Numeric sort function used by "sort"
 function Numsort(a,b) { return a - b; }
 
+//
+// Defines "Hand" object, where said object refers to a "hand" of cards in
+//  a card game
+//
 function Hand(imageStart) {
   this.cards = new Array(5);
+  // TODO: I tried many different configurations for this.hold array but
+  //  could not reliably get it to reset in between draws. It does get reset
+  //  right before a deal()
   this.hold = [false, false, false, false, false];
+
+   // TODO: at some point, iImageBase would be used to support multiple screens at once.
   this.iImageBase = imageStart;
   this.rank = 0;
 
+  //
+  // The next four functions relate to the "hold" property which parallels the list
+  // of cards and can control whether the card is discarded for not.
   this.setHold = function(iCard) {
     this.hold[iCard] = true;
     document.images[this.iImageBase+iCard+5].src = sDir + "hold2.gif";
@@ -137,6 +150,8 @@ function Hand(imageStart) {
     }
   }
 
+
+  // The next three functions calculate, set and get the rank related attributes
   this.calcRank = function() {
     var straight = false;
     var flush = false;
@@ -255,8 +270,8 @@ function Hand(imageStart) {
 
   // TODO: for now, each hand gets the next five cards
   //  but if the dealing were animated this way with multiple
-  //  players, the players wouldn't like it expect cards to
-  //  be dealt "round robin"
+  //  players, the players wouldn't like it this way because they
+  //  would expect cards to be dealt "round robin"
   this.Deal = function(deck) {
     for(var i=0; i<5; i++) {
       this.addCardToHand(deck, i);
