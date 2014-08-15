@@ -32,6 +32,12 @@ var ciPRFourOfAKind = 7;
 var ciPRStraightFlush = 8;
 var ciPRRoyalFlush = 9;
 
+var ciCIAce = 0;
+var ciCITen = 9;
+var ciCIJack = 10;
+var ciCIQueen = 11;
+var ciCIKing = 12;
+
 function addToScore(n) {
   score += n;
   document.form1.total.value = score;
@@ -184,11 +190,11 @@ function Hand(imageStart) {
     }
 
     // straigh (Ace high)
-    if( nums[0] == 1 &&
-        nums[1] == 10 &&
-        nums[2] == 11 &&
-        nums[3] == 12 &&
-        nums[4] == 13 ) {
+    if( nums[0] == ciCIAce &&
+        nums[1] == ciCITen &&
+        nums[2] == ciCIJack &&
+        nums[3] == ciCIQueen &&
+        nums[4] == ciCIKing ) {
           straight = true;
         }
 
@@ -242,10 +248,10 @@ function Hand(imageStart) {
     }
 
     if( pairs == 1) {
-      if( tally[1] == 2 ||
-          tally[11] == 2 ||
-          tally[12] == 2 ||
-          tally[13] == 2) {
+      if( tally[ciCIAce] == 2 ||
+          tally[ciCIJacks] == 2 ||
+          tally[ciCIQueen] == 2 ||
+          tally[ciCIKing] == 2) {
       return ciPRJacksOrBetter;
       }
     }
