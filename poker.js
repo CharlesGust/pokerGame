@@ -249,7 +249,7 @@ function Hand(imageStart) {
 
     if( pairs == 1) {
       if( tally[ciTIAce] == 2 ||
-          tally[ciTIJacks] == 2 ||
+          tally[ciTIJack] == 2 ||
           tally[ciTIQueen] == 2 ||
           tally[ciTIKing] == 2) {
       return ciPRJacksOrBetter;
