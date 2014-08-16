@@ -32,6 +32,12 @@ var ciPRFourOfAKind = 7;
 var ciPRStraightFlush = 8;
 var ciPRRoyalFlush = 9;
 
+var ciTIAce = 0;
+var ciTITen = 9;
+var ciTIJack = 10;
+var ciTIQueen = 11;
+var ciTIKing = 12;
+
 function addToScore(n) {
   score += n;
   document.form1.total.value = score;
@@ -242,10 +248,10 @@ function Hand(imageStart) {
     }
 
     if( pairs == 1) {
-      if( tally[1] == 2 ||
-          tally[11] == 2 ||
-          tally[12] == 2 ||
-          tally[13] == 2) {
+      if( tally[ciTIAce] == 2 ||
+          tally[ciTIJack] == 2 ||
+          tally[ciTIQueen] == 2 ||
+          tally[ciTIKing] == 2) {
       return ciPRJacksOrBetter;
       }
     }
